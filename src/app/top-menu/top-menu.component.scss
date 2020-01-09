@@ -1,0 +1,18 @@
+div.container {
+  width: 100%;
+  height: 40px;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-areas: "logo links";
+  grid-gap: 1em;
+  background-color: blue;
+  div.logo {
+    grid-area: logo;
+  }
+  div.links{
+    a {
+      cursor: pointer;
+    }
+    grid-area: links;
+  }
+}
