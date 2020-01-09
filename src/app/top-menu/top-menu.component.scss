@@ -10,7 +10,8 @@ div.container {
     grid-area: logo;
   }
   div.links{
-    a {
+    display: inline-block;
+    span {
       cursor: pointer;
     }
     grid-area: links;
