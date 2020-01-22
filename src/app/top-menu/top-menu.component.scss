@@ -1,19 +1,50 @@
 div.container {
   width: 100%;
-  height: 40px;
+  height: 70px;
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-template-areas: "logo links";
   grid-gap: 1em;
-  background-color: blue;
+  background-color: white;
+  border-bottom: 5px solid #ff0050;
   div.logo {
     grid-area: logo;
   }
-  div.links{
-    display: inline-block;
-    span {
+  div.links {
+    grid-area: links;
+    display: grid;
+    align-items: center;
+    justify-items: stretch;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "home sample tariff contact about";
+    div {
+      border-left: 1px solid black;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 4em;
+      text-decoration: none;
+      font-size: 18px;
+      height: 100%;
+      // padding-top: 1.25em;
+      &:hover {
+        background-color: #ff0050;
+      }
       cursor: pointer;
     }
-    grid-area: links;
+    div.home {
+      grid-area: home;
+    }
+    div.sample {
+      grid-area: sample;
+    }
+    div.tariff {
+      grid-area: tariff;
+    }
+    div.contact {
+      grid-area: contact;
+    }
+    div.about {
+      grid-area: about;
+    }
   }
 }
