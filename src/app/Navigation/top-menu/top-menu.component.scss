@@ -1,14 +1,17 @@
 div.container {
   width: 100%;
   height: 70px;
+  direction: rtl;
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-template-areas: "logo links";
-  grid-gap: 1em;
+  grid-column-gap: 3em;
   background-color: white;
   border-bottom: 5px solid #ff0050;
+  margin-top: 4px;
   div.logo {
     grid-area: logo;
+    margin-right: 2em;
   }
   div.links {
     grid-area: links;
@@ -18,18 +21,24 @@ div.container {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "home sample tariff contact about";
     div {
-      border-left: 1px solid black;
       text-align: center;
-      vertical-align: middle;
-      line-height: 4em;
+      line-height: 3.5em;
       text-decoration: none;
       font-size: 18px;
       height: 100%;
-      // padding-top: 1.25em;
       &:hover {
         background-color: #ff0050;
       }
       cursor: pointer;
+      span {
+        display: block;
+        border-left: 1px solid rgb(209, 209, 209);
+        width: 100%;
+        height: 90%;
+        &:hover {
+          border: none;
+        }
+      }
     }
     div.home {
       grid-area: home;
@@ -46,5 +55,27 @@ div.container {
     div.about {
       grid-area: about;
     }
+  }
+}
+
+div.mobile-container {
+  width: 100%;
+  height: 70px;
+  direction: rtl;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "button . mobile-logo";
+  grid-column-gap: 3em;
+  align-items: center;
+  background-color: white;
+  border-bottom: 5px solid #ff0050;
+  margin-top: 4px;
+  div.mobile-logo {
+    grid-area: mobile-logo;
+    margin-left: 2em;
+  }
+  div.button {
+    grid-area: button;
+    margin-right: 1em;
   }
 }

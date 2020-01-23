@@ -1,0 +1,35 @@
+<mat-drawer-container class="container" autosize dir="rtl">
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <div class="logo section">
+
+      <div>
+        <img alt="Desing Order Platform" src="./assets/d14.png" />
+      </div>
+
+    </div>
+    <div class="links" dir="rtl" (click)="drawer.toggle()">
+      <div class="home" [routerLink]="''">
+        <span class="divider"> خانه </span>
+      </div>
+
+      <div class="sample" [routerLink]="'DesignSample'">
+        <span class="divider"> نمونه کارها </span>
+      </div>
+
+      <div class="tarrif" [routerLink]="'Tariff'">
+        <span class="divider"> تعرفه ها </span>
+      </div>
+
+      <div class="contact" [routerLink]="'Contact'">
+        <span class="divider"> ارتباط با ما </span>
+      </div>
+
+      <div class="about" [routerLink]="'About'">
+        <span class="divider"> در رابطه با ما </span>
+      </div>
+    </div>
+
+
+  </mat-drawer>
+  <router-outlet></router-outlet>
+</mat-drawer-container>

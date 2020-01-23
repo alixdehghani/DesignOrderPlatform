@@ -1,4 +1,4 @@
-<div class="container" dir="rtl">
+<div *ngIf="showDesktopWindow" class="container" dir="rtl">
   <div class="logo section">
 
     <div>
@@ -28,6 +28,20 @@
       <span class="divider"> در رابطه با ما </span>
     </div>
 
+
+  </div>
+</div>
+<div *ngIf="showMobileWindow" class="mobile-container">
+  <div class="button">
+    <button type="button" mat-raised-button color="primary" (click)="drawer.emit()">
+      منو
+    </button>
+  </div>
+  <div class="mobile-logo">
+
+    <div>
+      <img alt="Desing Order Platform" src="./assets/d14.png" />
+    </div>
 
   </div>
 </div>
